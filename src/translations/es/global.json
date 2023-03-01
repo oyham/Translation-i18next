@@ -1,5 +1,10 @@
 {
     "header":{
         "hello-world": "Hola Mundo"
+    },
+    "body":{
+        "p": "Pequeña aplicación dónde hacemos uso de la librería i18next para el cámbio de idíoma de fórma dinámica.",
+        "link":"Ir al repositorio en",
+        "link2":" para seguír el paso a paso"
     }
 }

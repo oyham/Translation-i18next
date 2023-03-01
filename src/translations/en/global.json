@@ -1,5 +1,10 @@
 {
     "header":{
         "hello-world": "Hello World"
+    },
+    "body":{
+        "p":"Small application where we make use of the i18next library to change the language dynamically.",
+        "link":"Go to the repository in",
+        "link2":" to follow the step by step"
     }
 }

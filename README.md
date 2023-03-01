@@ -76,3 +76,17 @@ Para añadír el botón de cambio de idíoma crearemos dos buttons. Cáda uno po
     </div>
 ```
 ---
+Añadí por mi cuenta la traducción al body, aunque tuve una pequeña complicación.
+Al tener el ``<a>`` con GitHub, tuve que envolverlo con dos funciones _**t**_ y no es eficiente creo. No se si habrá otra manera de hacerlo, pero quedó.
+```js
+    return (
+        <>
+            <p>{t("body.p")}</p>
+            <p>{t("body.link")}
+            <a href="https://github.com/oyham/Translation-i18next" target="_blank"><em>GitHub</em></a> 
+            {t("body.link2")}
+            </p>
+        </>
+    )
+``` 
+---
