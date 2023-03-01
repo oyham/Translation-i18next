@@ -1,6 +1,8 @@
+# Traducción con i18next
+
 - Inicializamos intalando i18next y react-i18next
 - Creamos la carpeta translations > en y es
-- Dentro de cada una creamos un archivo .json
+- Dentro de cada una creamos un archivo global.json
 
 Este json poseera las traducciones. Podemos divir las traducciones por componentes, por elementos o global.
 ```json
@@ -18,10 +20,10 @@ Este json poseera las traducciones. Podemos divir las traducciones por component
 }
 ```
 Luego debemos de dirigirnos hacia el archivo main donde se es llamada nuestra aplicación y ahi importar: 
-1- {I18nextProvider} de react-i18next
-2- i18next de i18next
+- {I18nextProvider} de react-i18next
+- i18next de i18next
 
-El Provider lo necesitamos para envolver el componente ``<App >``. El provider I18nextProvider poseera un atributo que llamaremos i18n={i18next}. Tambien debemos de inicializar i18next.
+El Provider lo necesitamos para envolver el componente ``<App >``. El provider I18nextProvider poseera un atributo que llamaremos ``i18n={i18next}``. Tambien debemos de inicializar i18next.
 ```js
 i18next.init({
   interpolation: { escapeValue: false }
@@ -65,6 +67,12 @@ Debemos de decirle a nuestro hook de dónde debe de traer las traducciones. En e
 ¿De dónde queremos sacar las traducciónes? De `"global"` tal cuál... `const [t,i18n] = useTranslation("global")`, sin la extención, i18next se encarga sólo.
 
 Sacaremos nuestro Hola Mundo y en cambio colocaremos el _**t**_ cómo función y pasarle la cláve que queremos mostrar: `header.hello-world`.
-
 Para añadír el botón de cambio de idíoma crearemos dos buttons. Cáda uno poseera el evento *onClick* y arrojará una función flecha llamando a *i18n.changeLenguage()* e indicamos entre los paréntesis el idíoma a cambiar.
-# Translation-i18next
+```js
+    <div>
+        <h1>{t("header.hello-world")}</h1>
+        <button onClick={()=> i18n.changeLanguage("es")}>ES</button>
+        <button onClick={()=> i18n.changeLanguage("en")}>EN</button>
+    </div>
+```
+---
